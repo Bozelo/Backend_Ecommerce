@@ -36,7 +36,7 @@ app.post("/api/product",(req, res)=>{
 
     var list = JSON.parse(req.body.list);
     productData.push(list); 
-
+    console.log(list);
     res.status(200).send({
         "status_code": 200,
         "message": "Compra realizada com sucesso!",
