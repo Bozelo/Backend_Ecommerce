@@ -29,11 +29,10 @@ const productData = [];
 
 app.listen(3000, ()=>{
    
-    console.log('Server On')
+console.log('Server On')
 });
 
 app.post("/api/product",(req, res)=>{
-
     var list = JSON.parse(req.body.list);
     productData.push(list); 
     console.log(list);
@@ -41,7 +40,6 @@ app.post("/api/product",(req, res)=>{
         "status_code": 200,
         "message": "Compra realizada com sucesso!",
       });
-
 })
 
 app.get("/api/product", (req, res) =>{
